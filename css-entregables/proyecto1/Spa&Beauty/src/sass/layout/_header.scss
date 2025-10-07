@@ -1,0 +1,65 @@
+@use '../abstracts/index' as abs;
+
+.header {
+    margin-bottom: 40px;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 10px;
+        height: 120px;
+        .nav-principal {
+            ul{
+                display: flex;
+                justify-content: space-between;
+                font-weight: 400;
+                @include abs.reset-list();
+                li{
+                    margin: 10px;
+                    a {
+                        text-decoration: none;
+                        color: abs.$primary-color;
+                        transition: font-size 0.4s ease;
+                        &:hover {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        
+        }
+        .login {
+            ul {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: 400;
+                li {
+                    margin: 10px;
+                    a {
+                        text-decoration: none;
+                        color: abs.$primary-color;
+                        transition: font-size 0.4s ease;
+                        &:hover {
+                            font-size: 20px;
+                        }
+                    }
+                    
+                &:nth-of-type(3) {
+                    text-decoration: underline;
+                }
+                &:last-child {
+                    a {
+                        color: white;
+                        @include abs.button(abs.$primary-color, abs.$secondary-color);
+                    }
+                    
+                    
+                }
+                }
+                @include abs.reset-list();
+            }
+        }
+    } 
+
+}
