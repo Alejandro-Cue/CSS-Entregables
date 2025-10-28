@@ -1,0 +1,7 @@
+@use '../abstracts/index' as abs;
+
+
+.login {
+    font-family: abs.$login-font
+    
+}
